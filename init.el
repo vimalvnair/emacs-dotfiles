@@ -10,12 +10,15 @@
 (require 'smartparens-config)
 (require 'powerline)
 (require 'move-dup)
-  
+(require 'auto-complete-config)
+
 (tool-bar-mode -1)
 (global-rinari-mode)
 (windmove-default-keybindings)
 (global-move-dup-mode)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(ac-config-default)
+
 (set-face-attribute 'default (selected-frame) :height 135)
 (set-frame-font "Hack" t t)
 
