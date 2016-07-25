@@ -13,6 +13,9 @@
 (require 'auto-complete-config)
 
 (tool-bar-mode -1)
+(menu-bar-mode t)
+(global-linum-mode t)
+(scroll-bar-mode -1)
 (global-rinari-mode)
 (windmove-default-keybindings)
 (global-move-dup-mode)
@@ -28,8 +31,8 @@
 (setq ido-enable-flex-matching t)
 
 (setq powerline-arrow-shape 'arrow)
-(setq powerline-arrow-shape 'curve)
-(setq powerline-arrow-shape 'arrow14)
+;;(setq powerline-arrow-shape 'curve)
+;;(setq powerline-arrow-shape 'arrow14)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -64,7 +67,7 @@
  '(custom-enabled-themes (quote (atom-dark)))
  '(custom-safe-themes
    (quote
-    ("a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" default)))
+    ("b04425cc726711a6c91e8ebc20cf5a3927160681941e06bc7900a5a5bfe1a77f" "a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" default)))
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
