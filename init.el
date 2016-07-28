@@ -12,6 +12,8 @@
 (require 'move-dup)
 (require 'auto-complete-config)
 
+(powerline-default-theme)
+;;(powerline-center-theme)
 (tool-bar-mode -1)
 (menu-bar-mode t)
 (global-linum-mode t)
@@ -30,9 +32,6 @@
 (ido-vertical-mode 1)
 (setq ido-enable-flex-matching t)
 
-(setq powerline-arrow-shape 'arrow)
-;;(setq powerline-arrow-shape 'curve)
-;;(setq powerline-arrow-shape 'arrow14)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,8 +39,6 @@
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
-(setq powerline-color1 "grey22")
-(setq powerline-color2 "grey40")
 
 (smartparens-global-mode)
 (show-smartparens-global-mode t)
@@ -71,5 +68,28 @@
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
-    (move-dup ido-vertical-mode powerline highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
+    (yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
 
+;;Powerline configs
+(setq powerline-default-separator 'arrow-fade)
+;;(setq powerline-text-scale-factor 1.1)
+(setq powerline-display-buffer-size nil)
+(setq powerline-display-mule-info nil)
+(setq powerline-display-hud nil)
+
+;;(setq powerline-height 25)
+(set-face-attribute 'powerline-active1 nil
+              :foreground "#F3C1BE"
+              :background "#A75C58")
+
+(set-face-attribute 'powerline-active2 nil
+              :foreground "#F3C1BE"
+              :background "#A75C58")
+
+(set-face-attribute 'powerline-inactive1 nil
+              :foreground "#A75C58"
+              :background "#F3C1BE")
+
+(set-face-attribute 'powerline-inactive2 nil
+              :foreground "#A75C58"
+              :background "#F3C1BE")
