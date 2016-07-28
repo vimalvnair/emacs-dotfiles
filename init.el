@@ -11,6 +11,7 @@
 (require 'powerline)
 (require 'move-dup)
 (require 'auto-complete-config)
+(require 'multiple-cursors)
 
 (powerline-default-theme)
 ;;(powerline-center-theme)
@@ -31,6 +32,12 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 (setq ido-enable-flex-matching t)
+
+;;Multiple cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -68,7 +75,7 @@
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
-    (yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
+    (multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
 
 ;;Powerline configs
 (setq powerline-default-separator 'arrow-fade)
