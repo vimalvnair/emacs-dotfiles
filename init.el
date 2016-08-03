@@ -12,6 +12,7 @@
 (require 'move-dup)
 (require 'auto-complete-config)
 (require 'multiple-cursors)
+(require 'selectric-mode)
 
 (powerline-default-theme)
 ;;(powerline-center-theme)
@@ -32,6 +33,11 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 (setq ido-enable-flex-matching t)
+
+(global-set-key (kbd "C-x e") 'eval-buffer)
+
+;;wttrin (weather data)
+(setq wttrin-default-cities '("bangalore"))
 
 ;;Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -75,7 +81,7 @@
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
-    (multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
+    (clojure-mode wttrin markdown-mode slim-mode haml-mode selectric-mode multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
 
 ;;Powerline configs
 (setq powerline-default-separator 'arrow-fade)
