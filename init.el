@@ -26,6 +26,13 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (ac-config-default)
 
+;;Backup
+(setq backup-directory-alist `(("." . "~/.saves-emacs")))
+(setq backup-by-copying t)
+
+;;Load file changes
+(global-auto-revert-mode t)
+
 (set-face-attribute 'default (selected-frame) :height 135)
 (set-frame-font "Hack" t t)
 
@@ -68,6 +75,8 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("org" . "http://orgmode.org/elpa/") t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -81,7 +90,7 @@
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
-    (clojure-mode wttrin markdown-mode slim-mode haml-mode selectric-mode multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
+    (org-edna web-mode js-auto-beautify smali-mode clojure-mode wttrin markdown-mode slim-mode haml-mode selectric-mode multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
 
 ;;Powerline configs
 (setq powerline-default-separator 'arrow-fade)
@@ -106,3 +115,4 @@
 (set-face-attribute 'powerline-inactive2 nil
               :foreground "#A75C58"
               :background "#F3C1BE")
+(put 'upcase-region 'disabled nil)
