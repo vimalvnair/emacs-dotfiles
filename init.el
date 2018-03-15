@@ -51,6 +51,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-x C-g") 'rgrep)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -78,6 +79,10 @@
 (add-to-list 'package-archives
              '("org" . "http://orgmode.org/elpa/") t)
 
+(global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-default-notes-file "~/Documents/org/index.org")
+
+  (setq org-agenda-files (list "~/Documents/org/index.org"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
