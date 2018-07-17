@@ -2,3 +2,7 @@
 auto-save-list/*
 *~
 *.dat
+*.data
+tramp
+notes
+bookmarks

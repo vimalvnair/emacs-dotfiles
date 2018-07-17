@@ -25,7 +25,8 @@
 (global-move-dup-mode)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (ac-config-default)
-
+(setq enh-ruby-add-encoding-comment-on-save nil)
+(setq ruby-insert-encoding-magic-comment nil)
 ;;Backup
 (setq backup-directory-alist `(("." . "~/.saves-emacs")))
 (setq backup-by-copying t)
@@ -51,7 +52,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-x C-g") 'rgrep)
+(global-set-key (kbd "C-x g") 'rgrep)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -95,7 +96,7 @@
  '(initial-buffer-choice t)
  '(package-selected-packages
    (quote
-    (org-edna web-mode js-auto-beautify smali-mode clojure-mode wttrin markdown-mode slim-mode haml-mode selectric-mode multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
+    (git-link org-edna web-mode js-auto-beautify smali-mode clojure-mode wttrin markdown-mode slim-mode haml-mode selectric-mode multiple-cursors yaml-mode octicons powerline move-dup ido-vertical-mode highlight-indentation smartparens rinari auto-complete atom-dark-theme literate-starter-kit))))
 
 ;;Powerline configs
 (setq powerline-default-separator 'arrow-fade)
@@ -120,4 +121,5 @@
 (set-face-attribute 'powerline-inactive2 nil
               :foreground "#A75C58"
               :background "#F3C1BE")
+
 (put 'upcase-region 'disabled nil)
