@@ -54,6 +54,17 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-x g") 'rgrep)
 
+(global-set-key (kbd "s-<down>")
+  (lambda ()
+    (interactive)
+    (setq this-command 'next-line)
+    (next-line 4)))
+
+(global-set-key (kbd "s-<up>")
+  (lambda ()
+    (interactive)
+    (setq this-command 'previous-line)
+    (previous-line 4)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -104,6 +115,9 @@
 (setq powerline-display-buffer-size nil)
 (setq powerline-display-mule-info nil)
 (setq powerline-display-hud nil)
+
+;; Auto Mode
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
 ;;(setq powerline-height 25)
 (set-face-attribute 'powerline-active1 nil
